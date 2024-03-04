@@ -1,0 +1,23 @@
+<div class="photo-container">
+<mat-card *ngIf="currentPhoto" class="photo-card" (keydown.arrowleft)="previousPhoto()" (keydown.arrowright)="nextPhoto()" tabindex="0">
+    <mat-card-actions class="action-buttons">
+        <button mat-button (click)="previousPhoto()">Previous</button>
+        <button mat-button (click)="nextPhoto()">Next</button>
+      </mat-card-actions>
+    <img [src]="currentPhoto.url" [alt]="currentPhoto.description" class="photo-image">
+    <mat-card-content>
+      <p>{{ currentPhoto.description }}</p>
+      <p>User: {{ currentPhoto.user.firstName }} {{ currentPhoto.user.lastName }}</p>
+      <!-- <p>Username: {{ currentPhoto.user.username }}</p> -->
+      <p>Categories:</p>
+      <ul>
+        <li *ngFor="let category of currentPhoto.categories">{{ category.name }}</li>
+      </ul>
+    </mat-card-content>
+
+  </mat-card>
+  
+  
+  
+  </div>
+  

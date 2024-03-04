@@ -1,0 +1,60 @@
+  <!-- photos.component.html -->
+<div [@routeAnimations]>
+<div class="photos-container">
+<h2>Latest Photos</h2>
+
+<div class="carousel-container">
+  <div class="carousel-wrapper" [style.transform]="'translateX(-' + currentSlideIndex * 100 + '%)'">
+    <div class="carousel-item" *ngFor="let photo of recentPhotos; let i = index">
+      <a [routerLink]="['/photo', photo.id]">
+        <img [src]="photo.url" alt="{{ photo.description }}" class="carousel-image">
+        <div class="overlay"></div>
+      </a>
+    </div>
+  </div>
+  <button class="prev-arrow" (click)="prevSlide()">&lt;</button>
+  <button class="next-arrow" (click)="nextSlide()">&gt;</button>
+  <!-- <div class="carousel-indicators">
+    <button class="indicator" *ngFor="let photo of recentPhotos; let i = index" [class.active]="currentSlideIndex === i" (click)="goToSlide(i)"></button>
+  </div> -->
+</div>
+
+<h2>All Photos</h2>
+
+<div class="pagination-controls">
+  <!-- Category selector -->
+  <mat-form-field>
+    <mat-label>Select Category</mat-label>
+    <mat-select multiple [(ngModel)]="selectedCategories" (selectionChange)="paginatePhotos()">
+      <mat-option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span class="paginator"></span>
+
+  <!-- MatPaginator component -->
+  <mat-paginator [length]="filteredPhotos.length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 aria-label="Select page"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+
+<!-- Photo grid -->
+<div class="flex-container">
+  <div class="flex-item" *ngFor="let photo of paginatedPhotos">
+    <a [routerLink]="['/photo', photo.id]">
+      <img [src]="photo.url" alt="{{ photo.description }}" class="photo-image">
+      <div class="overlay"></div>
+    </a>
+  </div>
+</div>
+<div class="pageButton">
+  <button mat-button (click)="loadPreviousPage()">Previous page</button>
+<button mat-button (click)="loadNextPage()">Next page</button>
+</div>
+<!-- <button mat-icon-button #scrollButton class="scroll-top-button" (click)="scrollToTop()">
+  <i class="fa-solid fa-arrow-up"></i></button> -->
+
+  
+</div>

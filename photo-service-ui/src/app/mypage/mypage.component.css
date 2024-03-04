@@ -1,0 +1,109 @@
+
+
+.mypage-container {
+    font-family: 'Montserrat'!important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 10px; /* Adjust the padding between cards */
+    /* margin-top: 30px; */
+  }
+
+  .custom-font {
+    font-family: 'Montserrat'!important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .mypage-card {
+    font-family: 'Montserrat'!important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    flex: 1 0 calc(33.33% - 20px); /* Adjust card width and margin */
+    margin-bottom: 20px; /* Adjust margin between rows */
+    max-width: 300px;
+    min-width: 300px;
+  }
+
+
+  /* Custom CSS for the upload image card */
+.mypage-card {
+
+    /* background-color: #f0f0f0;  */
+    border: 1px solid #ccc; /* Adjust the border color and width */
+  }
+  
+  .mypage-card mat-form-field {
+    width: 100%;
+  }
+  
+  .mypage-card input[type="file"] {
+    background-color: whitesmoke;
+    width: calc(100% - 20px); /* Adjust the width with some padding */
+    height: 40px;
+    margin-bottom: 20px; /* Add some margin between elements */
+    padding: 8px; /* Add padding */
+    font-size: 14px; /* Adjust the font size */
+    border-bottom: 1px solid #ccc; /* Adjust the border */
+    border-radius: 1px; /* Add border-radius */
+  }
+
+  
+  /* Custom CSS for the form fields */
+  .mypage-card mat-label {
+    color: #333; /* Adjust the font color */
+  }
+  
+  .mypage-card input[type="text"] {
+    background-color: whitesmoke;
+    width: calc(100% - 20px); /* Adjust the width with some padding */
+    height: 40px;
+    margin-bottom: 20px; /* Add some margin between elements */
+    padding: 8px; /* Add padding */
+    font-size: 14px; /* Adjust the font size */
+    border-bottom: 0px solid #ccc; /* Adjust the border */
+    border-radius: 1px; /* Add border-radius */
+  }
+
+  .mypage-card input[type="file"]::file-selector-button {
+    text-align: center; /* Align the button text to the center */
+  }
+  
+  .mypage-card input[type="file"]::-webkit-file-upload-button {
+    /* Adjust styles for the file input button */
+    background-color: #007bff; /* Adjust the background color */
+    color: #fff; /* Adjust the font color */
+    border: none; /* Remove the border */
+    padding: 10px; 
+    cursor: pointer; /* Add pointer cursor */
+    border-radius: 4px; /* Add border-radius */
+    margin-top: 1px; 
+  }
+  
+  .mypage-card input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #0056b3; /* Adjust the background color on hover */
+  }
+  
+  /* Custom CSS for the upload button */
+  .mypage-card button {
+    background-color: #007bff; /* Adjust the background color */
+    color: #fff; /* Adjust the font color */
+    border: none; /* Remove the border */
+    padding: px 16px; /* Add padding */
+    margin-left: 10px;
+    cursor: pointer; /* Add pointer cursor */
+  }
+  
+  .mypage-card button:hover {
+    background-color: #0056b3; /* Adjust the background color on hover */
+  }
+
+
+  
+  

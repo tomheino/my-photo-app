@@ -1,0 +1,55 @@
+.login-form {
+    /* display: flex;
+    align-items: center; */
+    padding: 16px;
+    /* justify-content: right; */
+  }
+
+  /* .login-container {
+    position: relative;
+    top: 0px; 
+    left: 0;
+    width: 100%;
+    min-height: 60vh;
+    background-color: darkviolet;
+    z-index: 1000;
+  }
+  
+  .login-card {
+    padding: 20px;
+    width: 400px; 
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .login-container {
+    position: relative;
+    top: 0; /* Adjust this value based on the height of your toolbar */
+    left: 0;
+    width: 100%;
+    /* background-color: var(--greenforest); */
+    padding: 2rem 0;
+    z-index: 1000; 
+  }
+  
+  
+  .login-card {
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-button {
+    width: 100%;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }

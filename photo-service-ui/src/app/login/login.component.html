@@ -1,0 +1,42 @@
+<div [@routeAnimations]>
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <button mat-icon-button class="close-icon" (click)="goBack()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (submit)="login()">
+        <mat-form-field appearance="fill">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" [(ngModel)]="username" name="username">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password">
+        </mat-form-field>
+        <div style="margin-top: 16px;"> 
+          <button mat-raised-button color="primary" type="submit">Login</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+</div>
+<!-- <router-outlet [@routeAnimations]="prepareRoute(outlet)"></router-outlet> -->
+
+<!-- <form>
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="username" name="username" placeholder="Username">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="password" name="password" placeholder="Password">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="login()">Login</button>
+</form> -->
+
+ 

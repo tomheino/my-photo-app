@@ -1,0 +1,32 @@
+:root {
+    --blackie: #1E1E24;
+    --greenie: #0FFF95;
+    --reddie: #92140C;
+    --whitie: #FFF8F0;
+    --greenforest: #2B9720;
+    
+
+    --font-family: 'Montserrat', sans-serif;   font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+html, body { height: 100%;
+  font-family: 'Montserrat'!important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;}
+body { 
+  margin: 0;
+}
+
+:not(.fa, .fa-solid, .mat-icon, .button, .mat-button) {
+  font-family: 'Montserrat' !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/Montserrat-VariableFont_wght.ttf');
+}

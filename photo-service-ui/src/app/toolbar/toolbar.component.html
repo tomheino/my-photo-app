@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <div class="toolbar-container">
+      <button class="hamburger hamburger--spin" [class.is-active]="isMenuOpen" (click)="toggleMenu()">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <span id="toolbar-title">{{theappname}}</span>
+      <span class="login-container"></span>
+  <ng-container *ngIf="isLoggedIn(); else loginButton">
+    <button mat-button color="accent" (click)="logout()">Logout</button>
+  </ng-container>
+  <ng-template #loginButton>
+    <button mat-button color="accent" routerLink="/login">Login</button>
+  </ng-template>
+</div>
+</mat-toolbar>
+
+<mat-sidenav-container style="height: 100vh; width: auto;">
+    <mat-sidenav [mode]="'over'" [opened]="isMenuOpen" (closed)="closeMenu()">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/photos" (click)="closeMenu()">Photos</a>
+        <a mat-list-item routerLink="/mypage" (click)="closeMenu()">My Page</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+  
